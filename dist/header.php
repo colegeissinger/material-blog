@@ -22,22 +22,21 @@
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'material-blog' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
+	<header id="masthead" class="site-header navbar-fixed" role="banner">
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<div class="nav-wrapper">
-				<div class="site-branding container">
-					<div class="row">
-						<h1 class="site-title col s12"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php esc_html( bloginfo( 'name' ) ); ?></a></h1>
-						<h2 class="site-description col s12"><?php esc_html( bloginfo( 'description' ) ); ?></h2>
+			<div class="nav-wrapper container">
+				<div class="row">
+					<div class="col s12">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php esc_html( bloginfo( 'name' ) ); ?></a>
+						<?php
+						wp_nav_menu( array(
+							'container'  => '',
+							'menu_class' => 'right hide-on-med-and-down',
+							'menu_id'    => '',
+						) );
+						?>
 					</div>
-				</div><!-- .site-branding -->
-				<?php
-				wp_nav_menu( array(
-					'container'  => '',
-					'menu_class' => 'right hide-on-med-and-down',
-					'menu_id'    => 'nav-mobile',
-				) );
-				?>
+				</div>
 			</div>
 		</nav>
 	</header><!-- #masthead -->
