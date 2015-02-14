@@ -30,3 +30,17 @@ What you can expect from `Material Blog`:
 	* Fixed positioning of any element on a page (aka `pinning`).
 	* ScrollFire and ScrollSpy.
 	* Mobile optimized navigation with intuitive drag to open and close.
+	
+Getting Started
+---------------
+
+Material Blog was started on Feb 13th, 2015 and is by no means ready for production. If you wish
+to play with it, grabbing a copy of the `dist` folder and placing in your themes directory will get
+you started. Take note, integration of the Materialize framework is still underway.
+
+##### Compiling the source
+If you wish to compile from the source, you'll need the latest versions of NPM, Grunt and Bower.
+
+Run `bower install` to install the materialize framework
+Run `npm install` to install the Grunt plugins needed to compile the source.
+Run `grunt build` to process all the Sass, minify scripts and CSS, and process a WordPress ready theme.
