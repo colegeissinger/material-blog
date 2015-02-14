@@ -1,0 +1,14 @@
+{
+  "name": "materialblog",
+  "description": "WordPress starter theme built on _s and the Materialize CSS framework.",
+  "author": "Cole Geissinger",
+  "homepage": "http://materialblog.github.io",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/colegeissinger/material-blog"
+  },
+  "devDependencies": {
+    "materialize": "~0.95.2"
+  }
+}

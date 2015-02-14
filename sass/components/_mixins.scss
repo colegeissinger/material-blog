@@ -1,0 +1,11 @@
+@mixin box-shadow-2($args1, $args2) {
+    -webkit-box-shadow: $args1, $args2;
+    -moz-box-shadow: $args1, $args2;
+    box-shadow: $args1, $args2;
+}
+
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+    font-size: ($sizeValue * 16) + px;
+    font-size: $sizeValue + rem;
+}
