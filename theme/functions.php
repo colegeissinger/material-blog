@@ -50,7 +50,7 @@ function material_blog_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary Menu', 'material-blog' ),
+		'primary' => __( 'Primary Menu', 'material-blog' ),
 	) );
 
 	/*
@@ -85,7 +85,7 @@ add_action( 'after_setup_theme', 'material_blog_setup' );
  */
 function material_blog_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'material-blog' ),
+		'name'          => __( 'Sidebar', 'material-blog' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -100,12 +100,12 @@ add_action( 'widgets_init', 'material_blog_widgets_init' );
  * Enqueue scripts and styles.
  */
 function material_blog_scripts() {
-	wp_enqueue_style( 'material-blog-style', esc_url( get_template_directory_uri() . '/css/materialblog.min.css' ), null, '{VERSION}' );
+	wp_enqueue_style( 'material-blog-style', get_template_directory_uri() . '/css/materialblog.min.css', null, '{VERSION}' );
 
 	wp_enqueue_script( 'jquery' );
-	wp_enqueue_script( 'material-blog-navigation', esc_url( get_template_directory_uri() . '/js/materialblog.min.js' ), array( 'jquery' ), '{VERSION}', true );
+	wp_enqueue_script( 'material-blog-navigation', get_template_directory_uri() . '/js/materialblog.min.js', array( 'jquery' ), '{VERSION}', true );
 
-	wp_enqueue_script( 'material-blog-skip-link-focus-fix', esc_url( get_template_directory_uri() . '/js/skip-link-focus-fix.js' ), array(), '{VERSION}', true );
+	wp_enqueue_script( 'material-blog-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '{VERSION}', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
